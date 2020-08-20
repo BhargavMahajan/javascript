@@ -1,0 +1,22 @@
+<label for="Input_string">String : </label>
+<input type="text" id="inputString"><br>
+<label for="input_number_of_repititions">Number of repititions : </label>
+<input type="text" id="inputRepititions"><br>
+<input type=button onClick="RepeatString();" value="String Repeated"><br>
+<textarea id="Solution"
+          rows="5" cols="100">
+</textarea>
+<script>
+function RepeatString(){
+	var string = document.getElementById("inputString").value;
+    var number = parseInt(document.getElementById("inputRepititions").value);
+    var ans = document.getElementById("Solution");
+    var ansStr = "";
+    for(var i=0;i<string.length;i++){
+        for(var j=0;j<number;j++){
+        	ansStr = ansStr.concat(string[i]);
+        }
+    }
+	ans.textContent = ansStr;
+}
+</script>
