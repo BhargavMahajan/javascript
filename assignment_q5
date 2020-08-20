@@ -1,0 +1,19 @@
+<label for="d1">Number : </label>
+<input type="text" id="input"><br>
+<input type=button onClick="numbersInReverse();" value="Calculate"><br>
+<textarea id="solution" rows="3" cols="100">
+</textarea>
+<script>
+function numbersInReverse(){
+	var str = document.getElementById("input").value;
+    var n = parseInt(str);
+    if(n%2==1)
+    	n--;
+    str = "";
+    for(var i=n;i>0;i = i - 2){
+    	str = str + i + " ";   
+    }   
+    var ans = document.getElementById("solution");
+	ans.textContent = str;
+}
+</script>
