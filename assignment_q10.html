@@ -1,0 +1,17 @@
+  <label for="inp1">Enter number : </label>
+  <input type="text" id="input"><br>
+   <input type=button onClick="DisplaySquares();" value="The number represented square decimal wise"><br>
+<textarea id="Solution"
+          rows="5" cols="100">
+</textarea>
+<script>
+function DisplaySquares(){
+    var number = document.getElementById("input").value;
+    var ans = document.getElementById("Solution");
+    var Str = "";
+    for(var i=0;i<number.length;i++){
+    	Str=Str.concat(number[i]*number[i])
+    }   
+	ans.textContent = Str;
+}
+</script>
