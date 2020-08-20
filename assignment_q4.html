@@ -1,0 +1,14 @@
+<label for="d1">Number : </label>
+<input type="text" id="inp1"><br>
+<input type=button onClick="funCal();" value="Calculate"><br>
+<textarea id="answer"
+          rows="5" cols="10">
+</textarea>
+<script>
+function funCal(){
+	var str = document.getElementById("inp1").value;
+    var ans = document.getElementById("answer");
+    var n = parseInt(str);
+	ans.textContent = ((n*(n+1))/2);
+}
+</script>
